@@ -11,16 +11,17 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 	
 
-key_pressed = False;
+key_pressed = False
 
 def on_press(key):
-
-    if ((key == keyboard.Key.caps_lock) and (key_pressed = False)):
-       key_press = True;
-       window.deiconify() 
-
+    global key_pressed
+    if (key == keyboard.Key.caps_lock) and (key_pressed == False):
+        window.deiconify()
+        key_pressed = True
+    
     else:
-       window.withdraw()
+        window.withdraw()
+        key_pressed = False
        
             
 with keyboard.Listener(on_press=on_press) as listener :
