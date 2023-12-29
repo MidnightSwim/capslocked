@@ -2,6 +2,7 @@ from pynput import keyboard
 from tkinter import *
 import os
 
+#needed by PyInstaller to show the picture 
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
