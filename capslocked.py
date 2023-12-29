@@ -15,7 +15,7 @@ key_pressed = False;
 
 def on_press(key):
 
-    if ((key == keyboard.Key.caps_lock) && (key_pressed = False)):
+    if ((key == keyboard.Key.caps_lock) and (key_pressed = False)):
        key_press = True;
        window.deiconify() 
 
