@@ -16,13 +16,14 @@ key_pressed = False
 
 def on_press(key):
     global key_pressed
-    if (key == keyboard.Key.caps_lock) and (key_pressed == False):
-        window.deiconify()
-        key_pressed = True
+    if key == keyboard.Key.caps_lock:
+        if key_pressed == False:
+            window.deiconify()
+            key_pressed = True
     
-    else:
-        window.withdraw()
-        key_pressed = False
+        else:
+            window.withdraw()
+            key_pressed = False
        
             
 with keyboard.Listener(on_press=on_press) as listener :
